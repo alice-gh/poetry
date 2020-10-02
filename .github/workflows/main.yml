@@ -57,7 +57,8 @@ jobs:
       - name: Ensure cache is healthy
         if: steps.cache.outputs.cache-hit == 'true'
         shell: bash
-        run: python -m poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
+        run: python -m poetry run pip --version 
+        #run: python -m poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
 
       - name: Install dependencies
         shell: bash
